@@ -1,19 +1,21 @@
 import { useState } from 'react'
 import { Outlet } from 'react-router-dom';
 import NavBar from './NavBar'
-
 import '../styles/App.css'
+import { Slide, ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [justLoggedIn, setJustLoggedIn] = useState({value: false});
 
   return (
     <>
     <nav>
       <p>My Blog</p>
-      <NavBar />
+      <NavBar justLoggedIn={justLoggedIn} setJustLoggedIn={setJustLoggedIn}/>
       <hr />
     </nav>
+    <ToastContainer position='top-center' transition={Slide} theme='dark'/>
     <main>
       <Outlet />
     </main>
