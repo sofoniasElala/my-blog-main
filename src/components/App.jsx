@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Outlet } from 'react-router-dom';
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import NavBar from './NavBar'
+
+import '../styles/App.css'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,13 +10,14 @@ function App() {
   return (
     <>
     <nav>
-      <h1>My Blog</h1>
+      <p>My Blog</p>
+      <NavBar />
       <hr />
     </nav>
     <main>
       <Outlet />
     </main>
-    <footer>Copyright © <span id="date"></span> SofoniasElala  <a href="https://github.com/sofoniasElala/blog-content-management-system"><i className="fa-brands fa-github" style={{color: "#000000"}}></i></a></footer>
+    <footer>Copyright © <span id="date"></span> SofoniasElala  <a href="https://github.com/sofoniasElala/my-blog-main"><i className="fa-brands fa-github" style={{color: "#000000"}}></i></a></footer>
     </>
   )
 }
