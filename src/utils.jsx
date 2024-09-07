@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 function setUserLocalStorage(set, token = null){
     const twoWeeksExpiration = new Date();
     twoWeeksExpiration.setDate(twoWeeksExpiration.getDate() + 14);
@@ -20,7 +22,7 @@ export async function handleAuth(justLoggedIn, setJustLoggedIn, loginData = null
                 body: JSON.stringify(loginData)
             });
             const data = await response.json();
-            if (response.status === 200) { setUserLocalStorage(true, data.token); setJustLoggedIn({...justLoggedIn, value: true}); return data;}
+            if (response.status === 200) { setUserLocalStorage(true, data.token); return data;}
             else return data;
         } else {
             setUserLocalStorage(false);

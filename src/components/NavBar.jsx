@@ -1,13 +1,17 @@
 import PropTypes from 'prop-types'
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { handleAuth } from '../utils';
 
 export default function NavBar({ justLoggedIn, setJustLoggedIn }) {
+    const userIsLoggedIn = localStorage.getItem('blog-user') ? true : false;
+    const navigate = useNavigate();
+
     return (<div className='nav-links'>
     <NavLink to="/tags/film">Film</NavLink>
     <NavLink to="/tags/tech">Tech</NavLink>
     <NavLink to="/tags/fashion">Fashion</NavLink>
-    <button className='log' onClick={ () =>   handleAuth(justLoggedIn, setJustLoggedIn, false)} >{localStorage.getItem('blog-user') ? 'Log out' : 'Log in'}</button>
+    <button  onClick={ () =>   {userIsLoggedIn ? handleAuth(justLoggedIn, setJustLoggedIn) : navigate('/login') }} >{userIsLoggedIn ? 'Log Out' : 'Log In'}</button>
+    {!userIsLoggedIn && <button className='SignUp'>Sign Up</button>}
     </div>)
 }
 
