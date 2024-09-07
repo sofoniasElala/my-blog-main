@@ -17,6 +17,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.Toastify__toast-body { 
+  font-family: Teko; 
+  font-size: large;
+}
+
 nav {
   position: sticky;
   top: 1px;
@@ -62,17 +67,22 @@ hr {
 
 .nav-links button {
   padding: 4px 8px;
-  margin: 10px 25px;
+  margin: 10px 4px;
   text-align: center;
+}
+
+.SignUp {
+  color: #1a1a1a;
+  background-color: #ffffff;
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #42a46d;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #348155;
 }
 
 body {
@@ -99,9 +109,9 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
+/* .nav-links > button:hover {
   border-color: #b49479;
-}
+} */
 button:focus,
 button:focus-visible {
   outline: 10px auto -webkit-focus-ring-color;
