@@ -26,12 +26,12 @@ export default function LogInForm() {
     }
   }
   return (
-    <main className="login-main">
-      <p id="login-paragraph">
+    <main className="form-main">
+      <p id="form-paragraph">
         {"Log in"}
       </p>
     <form
-      id="login"
+      id="account"
       onSubmit={(e) => {
         e.preventDefault();
         handleSubmission(new FormData(e.currentTarget), setInputs);
