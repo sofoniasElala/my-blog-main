@@ -20,10 +20,10 @@ export default function SignUpForm() {
       3000
     );
 
-    if (errorData.success == true) {
-      navigate("/");
+    if (errorData.id) {
+      navigate("/login");
     } else {
-        signupData.errorMessage = errorData.message;
+        signupData.errorMessage = errorData.errors.errors[0].msg;
       setInputs(signupData);
     }
   }
