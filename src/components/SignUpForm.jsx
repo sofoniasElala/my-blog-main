@@ -30,7 +30,7 @@ export default function SignUpForm() {
   return (
     <main className="form-main">
       <p id="form-paragraph">
-        {"Sign Up"}
+        {"Sign up"}
       </p>
     <form
       id="account"
