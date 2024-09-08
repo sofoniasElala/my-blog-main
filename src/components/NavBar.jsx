@@ -11,7 +11,7 @@ export default function NavBar({ justLoggedIn, setJustLoggedIn }) {
     <NavLink to="/tags/tech">Tech</NavLink>
     <NavLink to="/tags/fashion">Fashion</NavLink>
     <button  onClick={ () =>   {userIsLoggedIn ? handleAuth(justLoggedIn, setJustLoggedIn) : navigate('/login') }} >{userIsLoggedIn ? 'Log Out' : 'Log In'}</button>
-    {!userIsLoggedIn && <button className='SignUp'>Sign Up</button>}
+    {!userIsLoggedIn && <button onClick={() => navigate('/signup')} className='SignUp'>Sign Up</button>}
     </div>)
 }
 

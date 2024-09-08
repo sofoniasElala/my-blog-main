@@ -34,6 +34,21 @@ export async function handleAuth(justLoggedIn, setJustLoggedIn, loginData = null
     
 }
 
+export async function signUpForAccount(signUpData){
+    let response;
+    try {
+        response = await fetch("https://sofonias-elala-blog-rest-api.glitch.me/sign-up,", {
+            method: 'POST',
+            headers: {"Content-Type": "application/json" },
+            body: JSON.stringify(signUpData)
+        });
+        const data = await response.json();
+        return data;
+    } catch(error) {
+        throw {fetchError: true, error: error}; 
+       }
+}
+
 export async function notificationPopUp(apiCall, popUpMessage, timeLength){
     return await toast.promise(apiCall, {
         pending: popUpMessage.pending,

@@ -1,5 +1,7 @@
 import App from './components/App'
 import LogInForm from './components/LoginForm';
+import SignUpForm from './components/SignUpForm';
+
 const loggedInUserReRouter = () => {
     const localData = localStorage.getItem('blog-user');
     if (localData) {
@@ -19,6 +21,11 @@ const routes = [
         path: "/login",
         loader: loggedInUserReRouter,
         element: <LogInForm />
+    },
+    {
+        path: "/signup",
+        loader: loggedInUserReRouter,
+        element: <SignUpForm />
     },
 ]
 
