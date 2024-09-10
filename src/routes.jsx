@@ -1,7 +1,8 @@
 import App from './components/App'
 import LogInForm from './components/LoginForm';
 import SignUpForm from './components/SignUpForm';
-import { redirect } from "react-router-dom"
+import { redirect } from "react-router-dom";
+import HomePage from './components/HomePage';
 
 const loggedInUserReRouter = () => {
     const localData = localStorage.getItem('blog-user');
@@ -16,7 +17,12 @@ const routes = [
     {
         path: "/",
         element: <App />,
-        children: []
+        children: [
+            {
+                path: "/",
+                element: <HomePage />
+            },
+        ]
     },
     {
         path: "/login",

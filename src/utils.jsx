@@ -12,6 +12,12 @@ function setUserLocalStorage(set, token = null){
     else localStorage.removeItem('blog-user')
 }
 
+export function capitalizeName(name){
+    const splitNameAndLowerCase = name.toLowerCase().split(' ');
+   const capitalizedNamesArray = splitNameAndLowerCase.map((name) =>  name[0].toUpperCase() + name.slice(1));
+    return capitalizedNamesArray.join(' ');
+}
+
 export async function handleAuth(justLoggedIn, setJustLoggedIn, loginData = null){
     let response;
     try {
@@ -72,4 +78,18 @@ export async function notificationPopUp(apiCall, popUpMessage, timeLength){
       }, {
         autoClose: timeLength
       });
+}
+
+export async function getPublishedPosts(){
+    try {
+        const response = await fetch("https://sofonias-elala-blog-rest-api.glitch.me/?limit=3", { //limits results to 3 to keep the 'homepage' simple
+            headers: {
+                "Content-Type": "application/json",
+             }
+        });
+        const data = await response.json();
+        return data.allPosts;
+    } catch(error) {
+        throw {fetchError: true, error: error}; 
+    }
 }
