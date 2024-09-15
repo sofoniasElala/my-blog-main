@@ -1,10 +1,12 @@
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, useLocation } from "react-router-dom";
 import { handleAuth, notificationPopUp } from "../utils";
 import { useState } from "react";
 
 export default function LogInForm() {
   const [inputs, setInputs] = useState(null);
   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/';
 
   async function handleSubmission(loginFormData, setInputs) {
     const loginData = {
@@ -19,7 +21,7 @@ export default function LogInForm() {
     );
 
     if (errorData.success == true) {
-      navigate("/");
+      navigate(from, {replace: true}); // navigate(prevousUrl.includes('localhost') ? -1 :  "/");
     } else {
       loginData.errorMessage = errorData.message;
       setInputs(loginData);
