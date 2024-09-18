@@ -3,9 +3,10 @@ import LogInForm from './components/LoginForm';
 import SignUpForm from './components/SignUpForm';
 import { redirect } from "react-router-dom";
 import HomePage from './components/HomePage';
+import Post from './components/Post';
 
 const loggedInUserReRouter = () => {
-    const localData = localStorage.getItem('blog-user');
+    const localData = localStorage.getItem('blog-visitor');
     if (localData) {
       return redirect("/");
     }
@@ -22,6 +23,10 @@ const routes = [
                 path: "/",
                 element: <HomePage />
             },
+            {
+                path: "posts/:postId",
+                element: <Post />
+            }
         ]
     },
     {

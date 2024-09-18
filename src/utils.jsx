@@ -8,8 +8,8 @@ function setUserLocalStorage(set, userData = null){
         expires: twoWeeksExpiration
     }
 
-    if(set) {localStorage.setItem('blog-visitor', JSON.stringify(data)); localStorage.setItem('blog-userId', JSON.stringify(userData.user.id));}
-    else {localStorage.removeItem('blog-visitor'); localStorage.removeItem('blog-userId');}
+    if(set) {localStorage.setItem('blog-visitor', JSON.stringify(data)); localStorage.setItem('blog-userInfo', JSON.stringify({id: userData.user.id, name: userData.user.username}));}
+    else {localStorage.removeItem('blog-visitor'); localStorage.removeItem('blog-userInfo');}
 }
 
 export function capitalizeName(name){
@@ -53,6 +53,24 @@ export async function signUpForAccount(signUpData){
     } catch(error) {
         throw {fetchError: true, error: error}; 
        }
+}
+
+export async function commentOnPost(postId, commentData){
+    let response;
+    try {
+        response = await fetch(`https://sofonias-elala-blog-rest-api.glitch.me/posts/${postId}/comments/`, {
+            method: 'POST',
+            headers:  {
+                "Content-Type": "application/json",
+                "Authorization": JSON.parse(localStorage.getItem('blog-visitor')).jwt,
+                },
+            body: JSON.stringify(commentData)
+        });
+        const data = await response.json();
+        return data;
+    } catch(error){
+        throw {fetchError: true, error: error};
+    }
 }
 
 export async function notificationPopUp(apiCall, popUpMessage, timeLength){
