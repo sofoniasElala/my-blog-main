@@ -98,6 +98,22 @@ export async function notificationPopUp(apiCall, popUpMessage, timeLength){
       });
 }
 
+export async function deleteComment(postId, commentId){
+    try {
+       const response = await fetch(`https://sofonias-elala-blog-rest-api.glitch.me/posts/${postId}/comments/${commentId}`, {
+            method: 'DELETE',
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": JSON.parse(localStorage.getItem('blog-visitor')).jwt,
+             }
+        });
+        const data = await response.json();
+        return data;
+    } catch(error) {
+        throw {fetchError: true, error: error}; 
+     }
+}
+
 export async function getPublishedPosts(){
     try {
         const response = await fetch("https://sofonias-elala-blog-rest-api.glitch.me/?limit=3", { //limits results to 3 to keep the 'homepage' simple

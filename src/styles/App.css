@@ -48,6 +48,22 @@
 img {
   border-radius: 5px;
 }
+.comment img {
+  padding: 4px;
+  width: 9px;
+  background-color: black;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 3px;
+}
+.comment h5 {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+.comment h5, .comment p {
+  margin: 10px 0px;
+}
 
 .post {
   display: grid;

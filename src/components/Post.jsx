@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
-import { getSpecificPost, notificationPopUp, commentOnPost} from "../utils";
+import { getSpecificPost, notificationPopUp, commentOnPost, deleteComment} from "../utils";
 import { DateTime } from "luxon";
+import trash from '/trash-solid.svg';
 
 function getFormattedDate(isoDate){
     const today = DateTime.now();
@@ -22,6 +23,13 @@ export default function Post(){
     const [inputValue, setInputValue] = useState('');
     const commentInputRef = useRef(null);
 
+
+    async function deleteCommentClick(commentId){
+        const deleteCommentApiCall =  deleteComment(post.post._id, commentId);
+        await notificationPopUp(deleteCommentApiCall, {pending: 'Deleting comment...', success: 'Comment deleted'}, 3000);
+        setPost({...post, allCommentsOnPost: post.allCommentsOnPost.filter((comment) => comment._id !== commentId)})
+      }
+
     async function handleSubmission(){
         const date = new Date();
         const commentData = {
@@ -37,9 +45,10 @@ export default function Post(){
         );
 
         if (errorData.id) {
+           const userInfo = JSON.parse(localStorage.getItem('blog-userInfo'));
            const postedComment = {
             _id: errorData.id,
-            author: {username: JSON.parse(localStorage.getItem('blog-userInfo')).name},
+            author: {_id: userInfo.id, username: userInfo.name},
             text: inputValue,
             date: date
            }
@@ -91,7 +100,7 @@ export default function Post(){
                     {post.allCommentsOnPost.length > 0 ?  (
                         post.allCommentsOnPost.map(comment => {
                         return <div className="comment" key={comment._id} >
-                            <h5>{comment.author.username} • <span className="comment-date">{getFormattedDate(comment.date)}</span></h5>
+                            <h5>{comment.author.username} • <span className="comment-date">{getFormattedDate(comment.date)}</span>{JSON.parse(localStorage.getItem('blog-userInfo')).id == comment.author._id &&  <img src={trash} width='20px' onClick={() => deleteCommentClick(comment._id)} alt="delete comment"/>}</h5>
                             <p>{comment.text}</p>
                             <hr />
                             </div>
