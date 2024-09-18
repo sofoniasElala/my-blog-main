@@ -21,7 +21,7 @@ export default function LogInForm() {
     );
 
     if (errorData.success == true) {
-      navigate(from, {replace: true}); // navigate(prevousUrl.includes('localhost') ? -1 :  "/");
+      navigate(from, {replace: true});
     } else {
       loginData.errorMessage = errorData.message;
       setInputs(loginData);
