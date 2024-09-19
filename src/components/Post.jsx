@@ -100,7 +100,7 @@ export default function Post(){
                     {post.allCommentsOnPost.length > 0 ?  (
                         post.allCommentsOnPost.map(comment => {
                         return <div className="comment" key={comment._id} >
-                            <h5>{comment.author.username} • <span className="comment-date">{getFormattedDate(comment.date)}</span>{JSON.parse(localStorage.getItem('blog-userInfo')).id == comment.author._id &&  <img src={trash} width='20px' onClick={() => deleteCommentClick(comment._id)} alt="delete comment"/>}</h5>
+                            <h5>{comment.author.username} • <span className="comment-date">{getFormattedDate(comment.date)}</span>{JSON.parse(localStorage.getItem('blog-userInfo'))?.id == comment.author._id &&  <img src={trash} width='20px' onClick={() => deleteCommentClick(comment._id)} alt="delete comment"/>}</h5>
                             <p>{comment.text}</p>
                             <hr />
                             </div>
