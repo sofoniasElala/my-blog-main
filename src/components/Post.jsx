@@ -90,7 +90,10 @@ export default function Post(){
                     <h4>{post.post.authorName}</h4>
                     <h6>{DateTime.fromISO(post.post.date).toFormat("MMMM dd, yyyy")}</h6>
                 </div>
-                <img width='600px' src={post.post.image} alt="post thumbnail" />
+                <div className="image-info">
+                    <img width='600px' src={post.post.image} alt="post thumbnail" />
+                    <h6>{post.post.imageOwner}</h6>
+                </div>
                 <p dangerouslySetInnerHTML={markup} ></p>
                 <div className='comment-section'>
                     <hr  className="hr-edit-divder"/>

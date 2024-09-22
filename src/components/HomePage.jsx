@@ -4,7 +4,7 @@ import { DateTime } from "luxon";
 import { useNavigate } from "react-router-dom";
 
 export default function HomePage() {
-    const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState(null);
     const navigate = useNavigate();
 
     useEffect(() =>{
@@ -24,6 +24,8 @@ export default function HomePage() {
         navigate(`posts/${postId}`);
       }
 
+      if (posts == null) return <p>Loading...</p>;
+      else
     return(
         <>
         <p className="float-banner" >MY BLOG</p>

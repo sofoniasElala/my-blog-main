@@ -98,6 +98,17 @@ export async function notificationPopUp(apiCall, popUpMessage, timeLength){
       });
 }
 
+export async function getPostsFromTag(tagId){
+    try {
+        const response = await fetch(`https://sofonias-elala-blog-rest-api.glitch.me/tags/${tagId}`);
+        const data = await response.json();
+        return data;
+    } catch(error) {
+        throw {fetchError: true, error: error}; 
+    }
+    
+}
+
 export async function deleteComment(postId, commentId){
     try {
        const response = await fetch(`https://sofonias-elala-blog-rest-api.glitch.me/posts/${postId}/comments/${commentId}`, {
