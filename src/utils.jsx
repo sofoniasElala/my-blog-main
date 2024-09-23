@@ -127,7 +127,7 @@ export async function deleteComment(postId, commentId){
 
 export async function getPublishedPosts(){
     try {
-        const response = await fetch("https://sofonias-elala-blog-rest-api.glitch.me/?limit=3", { //limits results to 3 to keep the 'homepage' simple
+        const response = await fetch(`https://sofonias-elala-blog-rest-api.glitch.me/?limit=${window.innerWidth < 768 ? 5 : 3}`, { //limits results to 3 to keep the 'homepage' simple
             headers: {
                 "Content-Type": "application/json",
              }

@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 export default function HomePage() {
     const [posts, setPosts] = useState(null);
     const navigate = useNavigate();
+    document.title = 'My Blog'
 
     useEffect(() =>{
         async function getPosts() {
@@ -39,10 +40,14 @@ export default function HomePage() {
                   <article className={index == 0 ? 'recent' : 'top-stories'} key={post._id} onClick={() => handleArticleEditClick(post._id)} >
                     <div className="content">
                         <img width='250px' src={post.image} alt="post thumbnail" />
-                        <h3>{post.title}</h3>
-                        <h5>{formattedName}</h5>
-                        <h6>{formattedDate}</h6>
-                        {index != 0 && <hr className="article-divider"/>}
+                        <div className="post-description">
+                          <h3>{post.title}</h3>
+                          <div className="authorPlusDate">
+                            <h5>{formattedName}</h5>
+                            <h6>{formattedDate}</h6>
+                          </div>
+                        </div>
+                     <hr className="article-divider"/>
                     </div>
                     {index == 0 && <hr className="vertical-divider"/>}
                   </article>

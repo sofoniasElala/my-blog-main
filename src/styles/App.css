@@ -136,6 +136,10 @@ img {
 
 .recent h3 {
   font-size: 60px;
+  line-height: 1;
+}
+.recent .article-divider {
+  display: none;
 }
 article {
   cursor: pointer;
