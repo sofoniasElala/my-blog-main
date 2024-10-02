@@ -26,6 +26,13 @@
   top: 5px;
   color: rgb(30, 133, 83);
 }
+.recent h3 {
+  display: inline;
+  font-size: 40px;
+  line-height: 1.5;
+  padding: 0px 5px;
+  background-color: #f1c40f;
+}
 
 .posts-container, .tag-posts-container {
   display: grid;

@@ -5,13 +5,14 @@ import '../styles/App.css'
 
 function App() {
   const [justLoggedIn, setJustLoggedIn] = useState({value: false});
+  const [isChecked, setIsChecked] = useState(false);
   const navigate = useNavigate();
 
   return (
     <>
     <nav>
-      <p onClick={() => navigate('/')} >My Blog</p>
-      <NavBar justLoggedIn={justLoggedIn} setJustLoggedIn={setJustLoggedIn} />
+      <p onClick={() => {navigate('/'); setIsChecked(false)}} >My Blog</p>
+      <NavBar justLoggedIn={justLoggedIn} setJustLoggedIn={setJustLoggedIn} isChecked={isChecked} setIsChecked={setIsChecked}/>
       <hr />
     </nav>
     <main>
