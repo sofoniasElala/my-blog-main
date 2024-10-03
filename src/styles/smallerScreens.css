@@ -22,7 +22,7 @@
         position: fixed;
         height: 100%;
         width: 240px;
-        top: 70.1px;
+        top: 70.3px;
         right: 0px;
         z-index: 5;
         padding-top: 25px;
@@ -43,7 +43,7 @@
         position: fixed;
         z-index: 5;
         display: block;
-        top: 70.1px;
+        top: 70.3px;
         background: black;
         opacity: .38;
         width: 100%;
@@ -104,6 +104,9 @@
     font-size: 120px;
     margin: 0;
     grid-area: 1 / 1 / 2 / 3;
+    }
+    .post-text p span {
+        font-size: 17.5px !important;
     }
     .post {
         display: flex;

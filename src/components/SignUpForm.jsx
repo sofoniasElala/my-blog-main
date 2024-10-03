@@ -5,6 +5,7 @@ import { useState } from "react";
 export default function SignUpForm() {
   const [inputs, setInputs] = useState(null);
   const navigate = useNavigate();
+  document.title = 'Sign up - My Blog'
 
   async function handleSubmission(signupFormData, setInputs) {
     const signupData = {

@@ -47,8 +47,10 @@ export default function NavBar({ justLoggedIn, setJustLoggedIn, isChecked, setIs
             <NavLink onClick={() => updateCheckedStatus(false)} to="/tags/other">Other</NavLink>
         </div>
         <hr />
-        <button  onClick={ () =>  handleLogClick(userIsLoggedIn, navigate, justLoggedIn, setJustLoggedIn, location)} >{userIsLoggedIn ? 'Log Out' : 'Log In'}</button>
-        {!userIsLoggedIn && <button onClick={() => navigate('/signup')} className='SignUp'>Sign Up</button>}
+        <div className="account-related">
+            <button  onClick={ () =>  handleLogClick(userIsLoggedIn, navigate, justLoggedIn, setJustLoggedIn, location)} >{userIsLoggedIn ? 'Log Out' : 'Log In'}</button>
+            {!userIsLoggedIn && <button onClick={() => navigate('/signup')} className='SignUp'>Sign Up</button>}
+        </div>
     </div>
     </div>)
 }

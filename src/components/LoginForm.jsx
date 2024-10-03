@@ -6,6 +6,7 @@ export default function LogInForm() {
   const [inputs, setInputs] = useState(null);
   const navigate = useNavigate();
   const location = useLocation();
+  document.title = 'Log in - My Blog'
   const from = location.state?.from?.pathname || '/';
 
   async function handleSubmission(loginFormData, setInputs) {

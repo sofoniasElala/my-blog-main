@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 export default function HomePage() {
     const [posts, setPosts] = useState(null);
     const navigate = useNavigate();
-    document.title = 'My Blog'
+    document.title = 'Home - My Blog'
 
     useEffect(() =>{
         async function getPosts() {

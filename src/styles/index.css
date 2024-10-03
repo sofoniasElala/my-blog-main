@@ -34,10 +34,13 @@ nav {
   width: calc(100vw  - 80px);
 
 }
-.menu {
+
+.menu, .account-related {
   display: flex;
-  align-items: center;
   gap: 8px;
+}
+.menu {
+  align-items: center;
 }
 nav > p {
   padding-top: 8px;

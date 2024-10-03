@@ -93,7 +93,7 @@ export default function Post(){
                     <img width='600px' src={post.post.image} alt="post thumbnail" />
                     <h6>{post.post.imageOwner}</h6>
                 </div>
-                <p dangerouslySetInnerHTML={markup} ></p>
+                <p dangerouslySetInnerHTML={markup} className="post-text"></p>
                 <div className='comment-section'>
                     <hr  className="hr-edit-divder"/>
                     <h3>Comments</h3>
