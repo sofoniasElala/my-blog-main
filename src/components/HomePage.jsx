@@ -25,7 +25,7 @@ export default function HomePage() {
         navigate(`posts/${postId}`);
       }
 
-      if (posts == null) return <p>...</p>;
+      if (posts == null) return <p>...server might be asleep</p>;
       else
     return(
         <>
