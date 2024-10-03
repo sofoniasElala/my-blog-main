@@ -25,7 +25,7 @@ export default function HomePage() {
         navigate(`posts/${postId}`);
       }
 
-      if (posts == null) return <p>Loading...</p>;
+      if (posts == null) return <p>...</p>;
       else
     return(
         <>

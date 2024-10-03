@@ -81,8 +81,7 @@ export default function Post(){
       }, [postId]);
 
 
-      if (post == null) return <p>Loading...</p>;
-      else
+      if (post != null) 
         return (
             <section className="post">
                 <div className="post-info">

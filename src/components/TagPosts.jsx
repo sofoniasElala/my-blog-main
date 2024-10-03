@@ -25,7 +25,7 @@ export default function TagPosts(){
 
 
 
-    if (postsByTag == null) return <p>Loading...</p>;
+    if (postsByTag == null) return <p>...</p>;
     else  
     return (
         <section key='tag-posts-container' className="tag-posts-container">

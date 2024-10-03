@@ -8,10 +8,18 @@ function App() {
   const [isChecked, setIsChecked] = useState(false);
   const navigate = useNavigate();
 
+  const handleClick = () => {
+    navigate('/');
+    if (isChecked) {
+     setIsChecked(false);
+    document.body.style.overflow = 'auto'
+    }
+  }
+
   return (
     <>
     <nav>
-      <p onClick={() => {navigate('/'); setIsChecked(false)}} >My Blog</p>
+      <p onClick={handleClick} >My Blog</p>
       <NavBar justLoggedIn={justLoggedIn} setJustLoggedIn={setJustLoggedIn} isChecked={isChecked} setIsChecked={setIsChecked}/>
       <hr />
     </nav>
