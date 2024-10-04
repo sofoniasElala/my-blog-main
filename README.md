@@ -1,6 +1,6 @@
 # My Blog - Main Site
 
-[![Static Badge](https://img.shields.io/badge/Live%20Demo-blue)](https://sofonias-elala-myblog-cms.netlify.app/) [![Netlify Status](https://api.netlify.com/api/v1/badges/fee63ebb-b77f-46a3-98d7-5a26500a31e0/deploy-status)](https://app.netlify.com/sites/sofonias-elala-myblog-main/deploys)
+[![Static Badge](https://img.shields.io/badge/Live%20Demo-blue)](https://sofonias-elala-myblog-main.netlify.app/) [![Netlify Status](https://api.netlify.com/api/v1/badges/fee63ebb-b77f-46a3-98d7-5a26500a31e0/deploy-status)](https://app.netlify.com/sites/sofonias-elala-myblog-main/deploys)
 
 The login fields are pre-filled with a demo account for ease of access, but you can create your own account and log in with that account.
 
