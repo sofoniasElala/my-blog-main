@@ -2,10 +2,10 @@
 
 [![Static Badge](https://img.shields.io/badge/Live%20Demo-blue)](https://sofonias-elala-myblog-main.netlify.app/) [![Netlify Status](https://api.netlify.com/api/v1/badges/fee63ebb-b77f-46a3-98d7-5a26500a31e0/deploy-status)](https://app.netlify.com/sites/sofonias-elala-myblog-main/deploys)
 
-The login fields are pre-filled with a demo account for ease of access, but you can create your own account and log in with that account.
 
 ## Description
-
+#### ***My Blog*** is a platform featuring blog posts on a variety of topics, including tech, film, fashion, and occasional other subjects. While all visitors are free to browse and read the content, creating an account is required to participate in the discussion by leaving comments. Signing up is quick and easy through the sign-up page, and once registered, users can both write and delete their own comments on posts.
+#### If you don't want to create an account but want to test the writing and deleting comments feature, the login page is pre-filled in with a demo account for you to utilize. all you have to do is click login!
 
 ## Links to the other ***My Blog*** repos
  * [![Static Badge](https://img.shields.io/badge/Content%20Management%20System-green)](https://github.com/sofoniasElala/blog-content-management-system)
@@ -16,6 +16,14 @@ The login fields are pre-filled with a demo account for ease of access, but you 
  * add aria-label for accessability
 
 ## Screenshots
+![Homepage](public/myBlog_main_screenshot_1.png) 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="public/myBlog_main_mobile_screenshot_3.png" alt="Homepage mobile" width="500"/> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="public/myBlog_main_mobile_screenshot_2.png" alt="comment section mobile" width="500"/>
+
+![comment section](public/myBlog_main_screenshot_2.png)
+
 
 ## Technologies Used:
 * REACT + Vite
