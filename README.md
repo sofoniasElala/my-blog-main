@@ -19,9 +19,9 @@
 ![Homepage](public/myBlog_main_screenshot_1.png) 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="public/myBlog_main_mobile_screenshot_3.png" alt="Homepage mobile" width="400"/> 
+<img src="public/myBlog_main_mobile_screenshot_3.png" alt="Homepage mobile" width="350"/> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="public/myBlog_main_mobile_screenshot_2.png" alt="comment section mobile" width="400"/>
+<img src="public/myBlog_main_mobile_screenshot_2.png" alt="comment section mobile" width="350"/>
 
 ![comment section](public/myBlog_main_screenshot_2.png)
 
