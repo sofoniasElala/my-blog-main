@@ -5,6 +5,8 @@ import { redirect } from "react-router-dom";
 import HomePage from './components/HomePage';
 import Post from './components/Post';
 import TagPosts from './components/TagPosts';
+import NotFound from './components/NotFound';
+import { element } from 'prop-types';
 
 const loggedInUserReRouter = () => {
     const localData = localStorage.getItem('blog-visitor');
@@ -50,6 +52,10 @@ const routes = [
         loader: loggedInUserReRouter,
         element: <SignUpForm />
     },
+    {
+        path: '*',
+        element: <NotFound />,
+    }
 ]
 
 export default routes;

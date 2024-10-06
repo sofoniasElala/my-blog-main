@@ -11,16 +11,17 @@
  * [![Static Badge](https://img.shields.io/badge/Content%20Management%20System-green)](https://github.com/sofoniasElala/blog-content-management-system)
  * [![Static Badge](https://img.shields.io/badge/Rest%20API-green)](https://github.com/sofoniasElala/blog_rest_api)
 
-## TODOs 
+## Future features
  * the ability to search for blog posts
- * add aria-label for accessability
+ * aria-label for accessability
 
 ## Screenshots
 ![Homepage](public/myBlog_main_screenshot_1.png) 
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="public/myBlog_main_mobile_screenshot_3.png" alt="Homepage mobile" width="300"/> 
+<img src="public/myBlog_main_mobile_screenshot_3.png" alt="Homepage mobile" width="400"/> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="public/myBlog_main_mobile_screenshot_2.png" alt="comment section mobile" width="300"/>
+<img src="public/myBlog_main_mobile_screenshot_2.png" alt="comment section mobile" width="400"/>
 
 ![comment section](public/myBlog_main_screenshot_2.png)
 
