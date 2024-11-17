@@ -78,7 +78,7 @@ export async function notificationPopUp(apiCall, popUpMessage, timeLength){
         pending: popUpMessage.pending,
         success: {
           render({data}){
-            if(data && data.success == false) throw new Error()
+            if(data && data.success == false) throw new Error(data.message || data.errors)
             else if (data.errors) throw new Error()
             else return popUpMessage.success
           }

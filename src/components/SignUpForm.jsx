@@ -24,7 +24,7 @@ export default function SignUpForm() {
     if (errorData.id) {
       navigate("/login");
     } else {
-        signupData.errorMessage = errorData.errors.errors[0].msg;
+        signupData.errorMessage = errorData.errors;
       setInputs(signupData);
     }
   }
