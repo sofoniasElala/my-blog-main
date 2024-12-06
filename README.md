@@ -4,14 +4,14 @@
 
 
 ## Description
-#### ***My Blog*** is a platform featuring blog posts on a variety of topics, including tech, film, fashion, and occasional other subjects. While all visitors are free to browse and read the content, creating an account is required to participate in the discussion by leaving comments. Signing up is quick and easy through the sign-up page, and once registered, users can both write and delete their own comments on posts.
+#### ***My Blog*** is a full-stack web application where you can explore blog posts on topics like tech, film, fashion, and more. Anyone can browse and read the content, but you’ll need to create an account to join the conversation by leaving comments. Signing up is quick and easy, and once you’re in, you can write and delete your own comments on any post.
 #### If you don't want to create an account but want to test the writing and deleting comments feature, the login page is pre-filled in with a demo account for you to utilize. all you have to do is click login!
 
 ## Links to the other ***My Blog*** repos
  * [![Static Badge](https://img.shields.io/badge/Content%20Management%20System-green)](https://github.com/sofoniasElala/blog-content-management-system)
  * [![Static Badge](https://img.shields.io/badge/Rest%20API-green)](https://github.com/sofoniasElala/blog_rest_api)
 
-## Future features
+## Potential future features
  * the ability to search for blog posts
  * aria-label for accessability
 
